@@ -1,0 +1,5 @@
+baseURL = "/"
+languageCode = "sk"
+languageLang = "sk"
+title = "RV IURIS"
+disableKinds = ["taxonomy", "taxonomyTerm"]

@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+
+media_folder: "site/static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "blog" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Clanok" # Used in the UI, ie.: "New Post"
+    folder: "site/content/blog" # The path to the folder where the documents are stored
+    identifier_field: id
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Nadpis", name: "title", widget: "string"}
+      - {label: "Datum", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "site/content/_index.md"
+        label: "Domov"
+        name: "home"
+        fields:
+          - {label: "Info", name: info, widget: object,fields: [
+          {label: "Zapnut", name: enabled, widget: boolean, default: false},
+          {label: "Viac", name: more, widget: string}]}
+          - {label: "Info Text", name: infotext, widget: markdown}
+      - file: "site/content/links/_index.md"
+        label: "Odkazy"
+        name: "links"
+        fields:
+          - {label: Kratky Text, name: description, widget: string}
+          - {label: Obsah, name: body, widget: markdown}
+      - file: "site/content/values/_index.md"
+        label: "Values Page"
+        name: "values"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Values
+            name: values
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
+              - {label: Image, name: imageUrl, widget: image}

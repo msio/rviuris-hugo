@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="content-wrapper">
+    <div class="container">
+        <h2>{{.Title}}</h2>
+        <p>{{ .Date.Format "02.01.2006" }}</p>
+        <div class="single-blog-content">
+            <div>
+                <p>{{ .Description }}</p>
+                {{ .Content }}
+            </div>
+            {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}"/>{{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,166 @@
+{{ define "main" }}
+<div class="corousel-container">
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="img/slide1.jpg">
+                <div class="carousel-caption">
+                    <p>
+                        Veritatem sequi et tueri iustitiam
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/slide2.jpg">
+                <div class="carousel-caption">
+                    <p>
+                        Aequum et bonum est lex legum
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/slide3.jpg">
+                <div class="carousel-caption">
+                    <p>
+                        Clara pacta, boni amici
+                    </p>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+    </div>
+</div>
+<div class="container">
+    {{if .Params.info.enabled }}
+    <div class="row important-info">
+        <div class="text-center" style="padding: 0 15px">
+            {{.Params.infotext }}
+            <div class="row">
+                <div class="btn-more-padding">
+                    <a href="{{.Params.info.more }}" class="btn-more" role="button">Viac</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{end}}
+    <div class="row welcome-container">
+        <div class="col-md-8">
+            <h3>Vitajte na stránke advokátskej kancelárie <span class="word-wrap">RV IURIS</span></h3>
+            <p>
+                Advokátska kancelária RV IURIS - JUDr. Rastislav Vranec vykonáva svoju činnosť už trinásť rokov. Za toto
+                obdobie poskytla právne poradenstvo nielen viacerým významným klientom – právnickým osobám ale aj
+                fyzickým
+                osobám, a to vo všetkých oblastiach práva na celom Slovenska ale aj v zahraničí. Základným pravidlom
+                práce
+                Advokátskej kancelárie RV IURIS - JUDr. Rastislav Vranec je poskytovanie služby klientovi. Právne služby
+                sa
+                opierajú o odbornú znalosť právneho poriadku, obhajovanie legitímnych záujmov klienta, dodržiavanie
+                mlčanlivosti o klientovi a jeho veciach a sú založené na dodržiavaní všeobecne záväzných právnych
+                predpisov,
+                rešpektovaní etických pravidiel výkonu povolania advokáta a dobrých mravoch.
+            </p>
+            <div class="row">
+                <div class="btn-more-padding">
+                    <a href="profil.html" class="btn-more" role="button">Viac</a>
+                </div>
+            </div>
+        </div>
+        <div class="welcome-img col-md-4">
+            <img class="img-responsive" src="img/welcome.jpg">
+        </div>
+    </div>
+</div>
+<!--<div class="law-services-and-signature-container">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                <img class="center-block" src="img/law_consulting.svg" alt="">-->
+<!--                <h3>Právne poradenstvo a právne služby</h3>-->
+<!--                <p>-->
+<!--                    Advokátska kancelária Vám ponúka komplexné právne služby a právne poradenstvo najmä v týchto-->
+<!--                    oblastiach:-->
+<!--                </p>-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            Obchodné právo a právo obchodných spoločností-->
+<!--                        </p>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            Občianske právo-->
+<!--                        </p>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            Rodinné právo-->
+<!--                        </p>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            Správne právo-->
+<!--                        </p>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            Trestné právo-->
+<!--                        </p>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                <div class="row">-->
+<!--                    <div class="btn-more-padding">-->
+<!--                        <a class="btn-more btn-hover-gray" href="sluzby.html">Viac</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="visible-xs visible-sm">-->
+<!--                <hr class="line-separator">-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <img class="center-block" src="img/subscription.svg" alt="">-->
+<!--                <h3>Zaručený elektronický podpis</h3>-->
+<!--                <p>-->
+<!--                    Viete, čo všetko ušetríte so zaručeným elektronickým podpisom?-->
+<!--                </p>-->
+<!--                <ul>-->
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            čas státím v radoch, zisťovaním úradných hodín a budete mať viac času na podanie dokumentov-->
+<!--                            aj po-->
+<!--                            úradných hodinách,-->
+<!--                        </p>-->
+<!--                    </li>-->
+
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            značné finančné prostriedky na poplatkoch za kolky a overenia podpisov pre Vás a Vašich-->
+<!--                            klientov,-->
+<!--                        </p>-->
+<!--                    </li>-->
+
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            stres z parkovania pri úradoch a možného odtiahnutia Vášho auta,-->
+<!--                        </p>-->
+<!--                    </li>-->
+
+<!--                    <li>-->
+<!--                        <p>-->
+<!--                            cestovanie za obchodnými partnermi iba kvôli podpisom vopred dohodnutých zmlúv.-->
+<!--                        </p>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                <div class="row">-->
+<!--                    <div class="btn-more-padding">-->
+<!--                        <a class="btn-more btn-hover-gray" href="zaruceny_elektronicky_podpis.html">Viac</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+{{ end }}

@@ -1,0 +1,104 @@
+{{ define "main" }}
+
+<div class="content-wrapper">
+	<div class="container">
+		<h2 class="visible-xs">Kontakt</h2>
+		<div class="row">
+			<div class="col-md-6">
+				<form class="contact-form contact-form-second" method="post" role="form" novalidate="novalidate">
+					<div class="form-group">
+						<label for="email-input">Emailová Adresa</label>
+						<input type="email" id="email-input" class="form-control" name="email" placeholder="Zadajte Váš Email">
+					</div>
+					<div class="form-group">
+						<label for="name-input">Meno</label>
+						<input type="text" id="name-input" class="form-control" name="name" placeholder="Zadajte Vaše Meno">
+					</div>
+					<div class="form-group">
+						<label for="subject-input">Predmet</label>
+						<input type="text" id="subject-input" class="form-control" name="subject" placeholder="Zadajte predmet vašej správy">
+					</div>
+					<div class="form-group">
+						<label for="message-textarea">Text</label>
+						<textarea class="form-control" id="message-textarea" name="message" placeholder="Zadajte Váš Text"></textarea>
+					</div>
+					<div class="form-group test-visibility">
+						<label for="test">Ak ste človek, nechajte toto pole prázdne</label>
+						<input type="text" id="test" name="test">
+					</div>
+					<div class="row btn-submit-and-msg-resp-status">
+						<div class="col-btn-submit">
+							<button type="submit" class="btn-submit">
+								Odoslať
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6 container-contact-info">
+				<div class="contact-info">
+					<img class="center-block" src="img/contact.svg" alt="">
+					<address>
+						Advokátska kancelária
+						<br>
+						RV IURIS - JUDr. Rastislav Vranec
+						<br>
+						<p>
+							Sídlo:
+						</p>
+						Mojmirová 13, 900 26 Slovenský Grob
+						<br>
+						Slovenská republika
+						<br>
+						<p>
+							Adresa kancelárie:
+						</p>
+						Osvetová 24, 821 05 Bratislava - Prievoz
+						<br>
+						Slovenská republika
+						<br>
+						IČO: 30792061
+						<br>
+						IČ DPH: SK 2022183515
+						<br>
+						<p>
+							Telefonický kontakt:
+						</p>
+						<a class="tel-disabled" href="tel:+421 2 5930 1071">+421 2 5930 1071</a>
+						<br>
+						<a class="tel-disabled" href="tel:+421 907 741 144">+421 907 741 144</a>
+						<br>
+						<p>
+							Emailová adresa
+						</p>
+						<a href="mailto:vranec@rviuris.sk">vranec@rviuris.sk</a>
+					</address>
+				</div>
+				<div id="map_canvas"></div>
+				<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;language=en"></script>
+				<script>
+					var image = 'img/map_marker.png';
+					var mapOptions = {
+						zoom : 17,
+						scrollwheel: false,
+						center : new google.maps.LatLng(48.150480, 17.174477),
+						mapTypeId : google.maps.MapTypeId.ROADMAP
+					};
+					var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+					var myPos = new google.maps.LatLng(48.150480, 17.174477);
+					var myMarker = new google.maps.Marker({
+						position : myPos,
+						map : map,
+						icon : image
+					});
+					google.maps.event.addListener(myMarker, 'click', function() {
+						window.open("https://www.google.com/maps/place/RV+IURIS+Advok%C3%A1tska+Kancel%C3%A1ria/@48.15048,17.174493,18z/data=!4m2!3m1!1s0x476c88ccdb67817b:0x6f446dc75e5f3e3", "_blank");
+					});
+				</script>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{{ end }}

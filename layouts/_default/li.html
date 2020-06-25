@@ -1,0 +1,10 @@
+<li class="blog-list-li">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Date.Format "02.01.2006" }}</p>
+    <p>{{ .Description }}</p>
+    <div class="row">
+        <div class="btn-more-padding">
+            <a href="{{ .RelPermalink }}" class="btn-more" role="button">Viac</a>
+        </div>
+    </div>
+</li>

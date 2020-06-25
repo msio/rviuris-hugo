@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<div class="content-wrapper">
+    <div class="container">
+        <ul class="blog-list">
+            {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
+            <div>
+                {{ .Render "li"}}
+            </div>
+            {{ end }}
+        </ul>
+        {{ partial "pagination" . }}
+    </div>
+</div>
+
+{{end}}

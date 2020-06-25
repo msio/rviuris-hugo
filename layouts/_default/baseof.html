@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="/css/styles543554df4stz.css" rel="stylesheet">
+<!--  {{ $title := site.Title }}-->
+<!--  {{ if not .IsHome }}-->
+<!--  {{ $title = printf "%s | %s" .Title site.Title }}-->
+<!--  {{ end }}-->
+  <title>
+<!--    {{ $title }}-->
+  </title>
+</head>
+<body>
+<div class="container container-header">
+  <div class="row">
+    <div class="col-sm-5">
+      <a class="no-decoration" href="/" class="logo-wrapper">
+        <img src="/img/rviuris_logo.svg" alt="RV IURIS">
+        <h1>ADVOKÁTSKA KANCELÁRIA</h1>
+      </a>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default navbar-centered	" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="navigation nav navbar-nav">
+        <li>
+          <a href="profil.html">Profil</a>
+        </li>
+        <li>
+          <a href="sluzby.html">Služby</a>
+        </li>
+        <li>
+          <a href="referencie.html">Referencie</a>
+        </li>
+        <li>
+          <a href="odmena.html">Odmena</a>
+        </li>
+        <li>
+          <a href="/blog">Články</a>
+        </li>
+        <li>
+          <a href="/odkazy">Zákony a Odkazy</a>
+        </li>
+        <li>
+          <a href="/kontakt">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-law-scales">
+        <img src="/img/law_scales.svg" alt="">
+      </div>
+      <div class="col-footer-nav">
+        <ul class="footer-nav">
+          <li>
+            <a href="index.html">Domov</a>
+          </li>
+          <li>
+            <a href="profil.html">Profil</a>
+          </li>
+          <li>
+            <a href="sluzby.html">Služby</a>
+          </li>
+          <li>
+            <a href="referencie.html">Referencie</a>
+          </li>
+          <li>
+            <a href="odmena.html">Odmena</a>
+          </li>
+
+          <li class="word-wrap">
+            <a href="odkazy.html">Zákony a Odkazy</a>
+          </li>
+          <li>
+            <a href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social-nav social-nav-mobile">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/rviuris" target="_blank"><img class="svg social-svg"
+                                                                            src="/img/facebook.svg"
+                                                                            alt="facebook"></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/RVIURIS" target="_blank"><img class="svg social-svg"
+                                                                       src="/img/twitter.svg" alt="twitter"></a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/107537895957385868972/posts" target="_blank"><img
+                    class="svg social-svg" src="/img/google_plus.svg" alt="google plus"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="visible-xs visible-sm">
+        <hr class="line-separator smaller-margin">
+      </div>
+      <div class="created-by">
+        <p>
+          Copyright ©2014
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.min.js"></script>
+<script src="/js/form_validation.js"></script>
+<script src="/js/screen-width.js"></script>
+<script src="/js/modernizr.js"></script>
+<script>
+  if (!Modernizr.svg) {
+    $('img[src*="svg"]').attr('src', function () {
+      return $(this).attr('src').replace('.svg', '.png');
+    });
+  }
+  $(function () {
+    $(".carousel").carousel();
+
+  });
+</script>
+</body>
+</html>
