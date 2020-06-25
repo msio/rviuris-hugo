@@ -1,4 +1,9 @@
 ---
 label: Hallo
 hide_body: false
-fields: []
+fields:
+- name: rstsrt
+  type: text
+  config:
+    required: false
+  label: rstsrt
